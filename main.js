@@ -1,26 +1,17 @@
 // Hamburger menu: mostrare / nascondere il menu principale
 
-const button = document.querySelector(".fa-bars")
-const openMenu = document.querySelector(".hamburger-menu")
-const closeCross = document.querySelector(".close")
-let element = document.querySelector(".header-right > a")
-// apertura dell'hamburger menu al click sul button
+const openButton = document.querySelector(".fa-bars")
+const menu = document.querySelector(".hamburger-menu")
+const closeButton = document.querySelector(".close")
 
-button.addEventListener("click",
+openButton.addEventListener("click",
     function(){
-        openMenu.style.display= "block";
+        menu.classList.add('active');
     }
-
 );
-closeCross.addEventListener("click",
+closeButton.addEventListener("click",
     function(){
-        openMenu.style.display= "none";
+        menu.classList.remove('active');
     }
-
 );
-if ( openMenu.style.display == none){
-    openMenu.style.display= "block";
-} else {
-    openMenu.style.display= "none";
-}
 
